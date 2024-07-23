@@ -1,41 +1,56 @@
-# ZephyrLLMChatbot
-A guideline to build no-cost LLM chatbot 
+# Sustainable Living Advisor Chatbot
 
-This README provides a structured and detailed guide to help users through the process of creating and deploying a customized LLM chatbot using Hugging Face Spaces and Gradio, highlighting key steps and customization options, complete with useful links for easy navigation.
+## Overview
 
+The Sustainable Living Advisor Chatbot is designed to provide users with tips and advice on sustainable living practices. This chatbot uses the Hugging Face Inference API to generate responses and is built using the Gradio library for a user-friendly interface.
 
-# Build and Deploy Your Custom LLM App in 5 Minutes for Free
+## Features
 
-## Introduction
-Have you ever wished to craft a chatbot tailored to your needs? Whether it's a culinary wizard to guide you through complex recipes or an artistic mentor to discuss the nuances of painting techniques, this comprehensive guide is your gateway. We'll walk you through the simple steps to build and deploy your own LLM-based chatbot using [Hugging Face Spaces](https://huggingface.co/spaces) and Gradio—all in just five minutes, and absolutely free of charge!
+- **Customizable Responses:** Users can customize the system message, maximum new tokens, temperature, and top-p settings to tailor the chatbot's responses.
+- **Streaming Responses:** The chatbot streams its responses for a more interactive experience.
+- **User-Friendly Interface:** Built with Gradio, the chatbot provides an easy-to-use interface for seamless interaction.
 
-## Prerequisites
-Before you  start creating your chatbot, make sure you have the following:
-- **A Hugging Face Account**: Essential for accessing the platform where you'll build and host your chatbot. [Sign up here](https://huggingface.co/join).
+## Installation
 
-## Setup and Deployment
-1. **Choosing Your Chatbot’s Identity**: Decide what your chatbot will specialize in. This could be anything from a chef, painter, or even a relaxing buddy to help you unwind. The role you choose will define the interactions and capabilities of your chatbot.
+To run this application, you need to install the required dependencies. Create a virtual environment and install the dependencies from `requirements.txt`.
 
-2. **Logging into Hugging Face**:  Here, you'll need an account to access the tools required for deploying your chatbot. If you don't have an account, signing up is straightforward and quick.
+```bash
+python -m venv env
+source env/bin/activate  # On Windows use `env\Scripts\activate`
+pip install gradio huggingface_hub
+```
 
-3. **Navigating to Hugging Face Spaces**: Spaces are where the magic happens. This section of Hugging Face allows users to create and manage their applications seamlessly. Navigate to [Spaces](https://huggingface.co/spaces) to get started.
+## Usage
 
-4. **Creating Your Space**: Initiate a new space by clicking on 'Create New Space'. It’s important that the name of your Space reflects the chatbot's role, as it helps in identifying the application’s purpose at a glance.
+1. Run the `app.py` script to launch the Gradio interface.
 
-5. **Configuring Your Chatbot**:
-   - **Selecting the Framework and Model**: Choose 'Gradio' as the framework for its user-friendly interface capabilities, and select a suitable model, such as 'Zephyr 7B', known for its versatility across various tasks.
-   - **Customization**: Here’s where you personalize the chatbot. Depending on the selected role, you might want to tailor system messages and interaction style. This customization will enable your chatbot to interact appropriately according to its role.
+```bash
+python app.py
+```
 
-6. **Deployment**: Once setup is complete, deploy your chatbot by simply clicking the create button. Deployment usually takes a couple of minutes. After this, your chatbot will be up and running and ready to interact.
+2. The Gradio interface will open in your default web browser. You can interact with the chatbot by entering your queries and adjusting the additional input settings as needed.
 
-## Customization Example
-To make your chatbot truly unique, consider personalizing it extensively. For instance, if you choose a 'Relaxing Buddy' role:
-- Modify the system messages to include comforting phrases and stress-relief tips.
-- Program the chatbot to suggest relaxation exercises, guide through meditation sessions, or simply offer soothing conversations.
+## Project Structure
 
- Explore different roles and tweak the system instructions to discover the full potential of your chatbot. Don’t forget to share your creations and experiences, as your insights could inspire others in their chatbot development.
+- `app.py`: Main application file containing the logic for generating chatbot responses and handling user interactions.
+- `requirements.txt`: Lists the required Python libraries.
 
- If you wish to contribute: Please fork this repo. 
+## Example Queries
 
- For any question reach me out @ turna.fardousi@gmail.com
+- How can I reduce my carbon footprint?
+- What are some eco-friendly alternatives to plastic?
+- How can I save energy at home?
+- What are the benefits of composting?
+- How can I support local farmers?
 
+## License
+
+This project is for informational purposes only and is intended to provide tips and advice on sustainable living practices. For official guidance, please refer to authorized resources or experts in sustainable living.
+
+## Disclaimer
+
+‼️Disclaimer: This chatbot is based on general sustainable living practices and is for informational purposes only. For official guidance and comprehensive advice, please refer to authorized resources or experts in sustainable living.‼️
+
+---
+
+Feel free to contribute to this project by submitting issues or pull requests on GitHub.
